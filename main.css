@@ -1,0 +1,52 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top:60px;
+    background-color: rgb(203, 231, 255);
+}
+.box{
+    background:wheat;
+    width: 800px;
+}
+.box .contentBx{
+    position: relative;
+    margin: 10px 20px;
+}
+.box .contentBx .label{
+    position: relative;
+    padding: 10px;
+    color: #2694af;
+    cursor: pointer;
+}
+.box .contentBx .label::before{
+    content:"+";
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 1.5rem;   
+}
+.box .contentBx.actived .label::before{
+    content:"-";
+}
+.box .contentBx .content{
+    position: relative;
+    background-color:rgba(237, 221, 189, 0.981);
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    overflow-y: auto;
+}
+.box .contentBx.actived .content{
+    height: 120px;
+    padding: 12px;
+}
+
